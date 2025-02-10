@@ -3,105 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enlaces Rápidos</title>
+    <title>Botones de Duelo - BattleKnight</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f4f1e1;
+            color: #3e2a47;
+            text-align: center;
             padding: 20px;
-            background-color: #f4f4f4;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .buttons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
         }
         .button {
-            background-color: #4CAF50;
+            background-color: #4b2e83;
             color: white;
-            font-size: 18px;
-            padding: 15px 32px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-            cursor: pointer;
+            border: 2px solid #7a5a9e;
+            border-radius: 10px;
+            padding: 15px 20px;
+            font-size: 1.2em;
             text-decoration: none;
-            display: block;
+            transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #45a049;
+            background-color: #7a5a9e;
+        }
+        @media (min-width: 768px) {
+            .buttons-container {
+                grid-template-columns: repeat(4, 1fr); /* Cuatro botones por fila en PC */
+            }
         }
     </style>
 </head>
 <body>
-
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1505331" class="button">CONAN</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2597842" class="button">Trances</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=391480" class="button">Sotek</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1661556" class="button">judas el destructor</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1580780" class="button">Oliver</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1581809" class="button">Sephiroth</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1579233" class="button">Hormiguero</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1490633" class="button">Zarpwd-77</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=867936" class="button">sir Angelo</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=94910" class="button">karty</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1583085" class="button">Captain Levi</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1971000" class="button">elmaster</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=75848" class="button">Baronesa Orihime [OSC]</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2792274" class="button">ping pong</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582778" class="button">lastraziel</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2791637" class="button">pearl</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1579370" class="button">pedro el enano</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=853026" class="button">ferms</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=460566" class="button">darth cheese</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582862" class="button">tom becker</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=137755" class="button">sir yesua</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2789581" class="button">silverblade</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=134608" class="button">-sanji-</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2795127" class="button">trueno</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2795161" class="button">-guerrera-</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2793818" class="button">dinoo</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2791329" class="button">cid campeador</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=83112" class="button">hrdeimar</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2693159" class="button">yisus craist</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2791578" class="button">xander</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582125" class="button">pachancle</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2791497" class="button">yugoas</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=63447" class="button">berilla kimmel</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582824" class="button">skarface</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2793820" class="button">demonhog</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=111575" class="button">excaliburt17</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582597" class="button">super saiyan 4</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2795586" class="button">ferro</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=3297" class="button">Laioner</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=121043" class="button">pendragon</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1650743" class="button">elcantabru</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2792496" class="button">blood</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2791292" class="button">mayorista</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=136230" class="button">sogoma</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582888" class="button">maron Yaotl</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=111826" class="button">hectorov</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=64685" class="button">valentinna</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2314122" class="button">megaciel</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2749097" class="button">alconnegro</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582934" class="button">Qui-Gon Jinn</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2795636" class="button">explorer</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=136114" class="button">crisrub</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=847660" class="button">izaro</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=750746" class="button">Sagitario</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2260043" class="button">super saiyan 3</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1582125" class="button">Barón Pachancle [CAS]</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2595600" class="button">Vizconde XxAmilcaRxX</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2794480" class="button">Khaleesi</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1583097" class="button">Vizconde Ken Masters [DDD]</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2794653" class="button">ishtar</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2790778" class="button">dark link</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=6818" class="button">Khal Droggo</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=84933" class="button">lord aticus</a>
-    <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=457819" class="button">manubrio</a>
-
+    <h1>Botones de Duelo - BattleKnight</h1>
+    <div class="buttons-container">
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1505331" class="button">CONAN</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2597842" class="button">Trances</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=391480" class="button">Sotek</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1661556" class="button">judas el destructor</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1580780" class="button">Oliver</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1581809" class="button">Sephiroth</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1579233" class="button">Hormiguero</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1490633" class="button">Zarpwd-77</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=867936" class="button">sir Angelo</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=94910" class="button">karty</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1583085" class="button">Captain Levi</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=1971000" class="button">elmaster</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=75848" class="button">Baronesa Orihime [OSC]</a>
+        <a href="https://s51-es.battleknight.gameforge.com/duel/duel/?enemyID=2792274" class="button">ping pong</a>
+        <!-- Añadir el resto de botones aquí -->
+    </div>
 </body>
 </html>
