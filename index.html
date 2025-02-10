@@ -13,6 +13,21 @@
         #rewardContainer { margin: 20px auto; width: 200px; }
         #rewardDisplay { max-width: 100%; display: none; }
         input, button { font-size: 1.2em; }
+        /* Estilos para la barra de progreso */
+        #progressBarContainer {
+            width: 80%;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            margin: 20px auto;
+            height: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #progressBar {
+            height: 100%;
+            border-radius: 25px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
     </style>
 </head>
 <body>
@@ -28,9 +43,15 @@
     <input type="date" id="date" onchange="loadTasks()">
     <br><br>
     <label for="goal">🏆 Puntos para premio final: </label>
-    <input type="number" id="goal" value="100">
+    <input type="number" id="goal" value="100" onchange="updateProgressBar()">
     <p>⭐ Puntos actuales: <span id="totalPoints">0</span></p>
     <p>🌟 Total acumulado: <span id="totalAccumulated">0</span></p>
+
+    <!-- Barra de progreso -->
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -127,6 +148,8 @@
             });
             document.getElementById("totalPoints").textContent = totalPoints;
             document.getElementById("totalAccumulated").textContent = totalAccumulated;
+
+            updateProgressBar();  // Actualiza la barra cada vez que se cargan las tareas
         }
 
         function updatePoints(checkbox, points, row, date, taskName) {
@@ -146,6 +169,7 @@
             localStorage.setItem("taskHistory", JSON.stringify(taskHistory));
             checkReward();
             document.getElementById("totalPoints").textContent = totalPoints;
+            updateProgressBar();
         }
 
         function editTask(index) {
@@ -193,6 +217,25 @@
             if (link) {
                 localStorage.setItem("rewardLink", link);
                 loadRewardImage(); // Previsualiza la imagen tras guardar
+            }
+        }
+
+        function updateProgressBar() {
+            let goal = parseInt(document.getElementById("goal").value);
+            let progress = (totalPoints + totalAccumulated) / goal * 100;
+            let progressBar = document.getElementById("progressBar");
+
+            if (progress > 100) progress = 100;  // Asegura que no se pase del 100%
+
+            progressBar.style.width = progress + "%";
+
+            // Cambia el color de la barra según el progreso
+            if (progress < 50) {
+                progressBar.style.backgroundColor = "#ff4500";  // Naranja si menos del 50%
+            } else if (progress < 80) {
+                progressBar.style.backgroundColor = "#ffdf00";  // Amarillo si menos del 80%
+            } else {
+                progressBar.style.backgroundColor = "#32cd32";  // Verde si más del 80%
             }
         }
 
